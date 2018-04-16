@@ -1,0 +1,648 @@
+/*!
+autor: Karasik Vadim
+project: serverconfigurator
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+p {
+    /*display: flex;*/
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr-Roman";
+    src: url("../fonts/HelveticaNeueCyr-Roman.eot");
+    src: url("../fonts/HelveticaNeueCyr-Roman.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr-Medium";
+    src: url("../fonts/HelveticaNeueCyr-Medium.eot");
+    src: url("../fonts/HelveticaNeueCyr-Medium.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr-Thin";
+    src: url("../fonts/HelveticaNeueCyr-Thin.eot");
+    src: url("../fonts/HelveticaNeueCyr-Thin.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Thin.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Thin.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr-Light";
+    src: url("../fonts/HelveticaNeueCyr-Light.eot");
+    src: url("../fonts/HelveticaNeueCyr-Light.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Light.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr-Bold";
+    src: url("../fonts/HelveticaNeueCyr-Bold.eot");
+    src: url("../fonts/HelveticaNeueCyr-Bold.eot?#iefix")format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: "HelveticaNeueCyr-Roman", Arial, Helvetica, sans-serif;
+    color: #3b3b3b;
+}
+
+h1 {
+    font-family: "HelveticaNeueCyr-Bold", Arial, Helvetica, sans-serif;
+    font-size: 800%;
+    margin-bottom: 20px;
+    @media(max-width: 768px) {
+        font-size: 600%;
+    }
+}
+
+h2 {
+    font-size: 400%;
+    color: #3b3b3b;
+    font-family: "HelveticaNeueCyr-Bold", Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 200%;
+}
+
+h4 {
+    font-family: "HelveticaNeueCyr-Bold", Arial, Helvetica, sans-serif;
+    font-size: 140%;
+    text-transform: uppercase;
+    margin: 10px 0 5px;
+    color: #3b3b3b;
+}
+
+p {
+    font-size: 160%;
+    color: #3b3b3b;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+header {
+    padding: 40px 0 100px;
+    &.main-page {
+        background: url("../img/man-top-left.jpg") no-repeat 100% 0 #ff6b48;
+        background-size: contain;
+        
+        @media(max-width: 768px) {
+            background:#ff6b48;
+        }
+        .button {
+            color: #ff6b48;
+        }
+    }
+    &.bip-page {
+        background: url("../img/amazfit_bip_smartwatch_composition.jpg") no-repeat 100% 30%;
+        background-size: cover;
+
+        @media(max-width: 768px) {
+            background:#fcf2f1;
+        }
+
+        .button {
+            color: #FCF2F1;
+        }
+    }
+    &.stratos-page {
+        background: url("../img/amazfit_stratos_super_avante_homepage_hero.jpg") no-repeat 90% 0 #000000;
+        background-size: contain;
+        h1,
+        p {
+            color: #ffffff;
+        }
+        .button {
+            background: #ffffff;
+            color: #000000;
+        }
+    }
+    &.cor-page {
+        background: url("../img/amazfit_cor.jpg") no-repeat center center;
+        background-size: cover;
+        h1,
+        p {
+            color: #ffffff;
+        }
+        .button {
+            background: #ffffff;
+            color: #000000;
+        }
+    }
+    p {
+        font-size: 220%;
+        margin-bottom: 50px;
+        max-width: 600px;
+    }
+    .button {
+        display: inline-block;
+        border: none;
+        text-decoration: none;
+        background: #3b3b3b;
+        padding: 15px 20px;
+        font-size: 200%;
+        letter-spacing: 2px;
+        font-family: "HelveticaNeueCyr-Bold", Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+    }
+}
+
+nav {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: stretch;
+    .logo {
+        background: #ffffff;
+        display: block;
+        text-decoration: none;
+        padding: 15px 10px;
+        img:first-child {
+            margin-right: 12px;
+        }
+    }
+    .menu {
+        padding: 15px 20px;
+        background: #313233;
+        vertical-align: top;
+        ul {
+            line-height: 2;
+        }
+        li {
+            display: inline-block;
+            margin: 0 10px;
+            a {
+                color: #ffffff;
+                font-size: 160%;
+                font-family: "HelveticaNeueCyr-Light", Arial, Helvetica, sans-serif;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.products {
+    margin-top: -35px;
+    margin-bottom: 50px;
+    background: #ffffff;
+    padding: 50px 0 0;
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        padding: 0 10px;
+    }
+    h3 {
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    p {
+        color: #ffffff;
+        margin: 0;
+    }
+    .items {
+        margin: 0;
+    }
+    img {
+        width: 100%;
+        max-width: 330px;
+    }
+    .bip {
+        position: relative;
+        background: #adceec;
+    }
+    .stratos {
+        position: relative;
+        background: #000000;
+    }
+    .cor {
+        position: relative;
+        background: #9dcfce;
+    }
+    .item {
+        text-align: center;
+        padding: 0 !important;
+        margin-bottom: 30px;
+    }
+    .title {
+        position: relative;
+        z-index: 1000;
+        display: inline-block;
+        width: 75%;
+        background: #313233;
+        margin-top: -40px;
+        padding: 20px;
+        text-decoration: none;
+    }
+}
+
+.overlay{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all .25s ease-in;
+
+    a{
+        display: inline-block;
+        border: 2px solid #ffffff;
+        padding: 10px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 120%;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0)
+    }
+
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.features {
+    padding: 50px 0 30px;
+    background: #f0f2f4;
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .function {
+        text-align: center;
+        margin-bottom: 50px;
+        p {
+            font-size: 140%;
+        }
+    }
+}
+
+.awards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    h3 {
+        font-size: 250%;
+        border-bottom: 1px solid #bec0c2;
+        transform: rotate(-90deg);
+        color: #bec0c2;
+        font-family: "HelveticaNeueCyr-Thin";
+        padding-bottom: 20px;
+        text-transform: uppercase;
+        text-align: right;
+        letter-spacing: 0.15em;
+        @media(max-width: 768px) {
+            transform: rotate(0deg);
+        }
+    }
+    img {
+        max-width: 145px;
+    }
+}
+
+.keeptrack {
+    background: url("../img/amazfit_justin_steps_041.jpg") no-repeat 0 50%;
+    background-size: cover;
+    padding: 50px;
+    position: relative;
+}
+
+.phoneholder {
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    video {
+        display: block;
+        width: 88%;
+        position: absolute;
+        top: 12%;
+        left: 6%;
+    }
+    .phone-mockup {
+        display: block;
+        width: 100%;
+    }
+}
+
+.app {
+    padding: 50px 50px 0;
+    h2 {
+        text-align: left;
+    }
+    img {
+        width: 150px;
+        padding: 5px;
+    }
+}
+
+.social {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background: #f0f2f4;
+    .social-photos {
+        padding: 40px 0;
+        text-align: center;
+        img {
+            max-width: 30%;
+            margin: 2px;
+        }
+    }
+    .social-text {
+        background: #f0f2f4;
+        padding: 40px;
+        h2 {
+            text-align: left;
+        }
+        .hashtag {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-bottom: 2px solid #f8c814;
+            padding-bottom: 5px;
+            font-family: "HelveticaNeueCyr-Medium";
+            color: #313233;
+            font-size: 140%;
+            line-height: 1.2;
+        }
+    }
+}
+
+.foto-slider {
+    background: #adceec;
+    text-align: center;
+    img {
+        width: 100%;
+        max-width: 500px;
+    }
+    h2 {
+        text-align: left;
+    }
+}
+
+.toggle-img {
+    //margin: 10px 0;
+}
+
+.prew {
+    display: inline-block; //background: #9dcfce;
+    border: 1px solid #ffffff;
+    width: 20%;
+    max-width: 100px;
+    max-height: 100px;
+    padding: 5px;
+    margin: 0 5px 10px;
+    &:hover {
+        cursor: pointer;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.shops {
+    background: #313233;
+    padding: 50px 0;
+    h2 {
+        color: #ffffff;
+        text-align: left;
+    }
+    p {
+        font-size: 160%;
+        margin-bottom: 30px;
+        line-height: 1.2;
+        color: #ffffff;
+    }
+}
+
+footer {
+    padding: 40px 0 40px;
+    background: #ffffff;
+    h2 {
+        font-size: 200%;
+        color: #696969;
+    }
+    p {
+        font-size: 120%;
+        color: #696969;
+        margin-bottom: 30px;
+    }
+    .social-icon {
+        width: 32px;
+        height: 32px;
+        margin: 0 2px 30px;
+        display: inline-block;
+        position: relative;
+        background: #000000;
+        vertical-align: baseline;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+}
+
+.investors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        width: 20%;
+    }
+}
+
+.text {
+    padding: 50px;
+}
+
+.light-bg {
+    background: #F0F2F4;
+    padding: 100px 0;
+    
+    @media(max-width: 992px){
+        padding: 50px 0;
+    }
+
+    h2 {
+        text-align: left;
+    }
+    img {
+        display: inline-block;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.dark-bg {
+    padding: 100px 0;
+    background: #000000;
+    color: #ffffff !important;
+
+    @media(max-width: 992px){
+        padding: 50px 0;
+    }
+
+    h2,
+    p {
+        color: #ffffff;
+    }
+    img {
+        display: inline-block;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+//Extra small devices Phones (<768px)	
+//Small devices Tablets (≥768px)	
+//Medium devices Desktops (≥992px)	
+//Large devices Desktops (≥1200px)
