@@ -42,7 +42,6 @@ gulp.task('browserSync', function () {
     browserSync.init({
         proxy: 'amazfit',
         port: 3000,
-        tunnel: true,
     })
 });
 
