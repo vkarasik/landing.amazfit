@@ -16,7 +16,8 @@
     <body>
         <div class="container-fluid">
         <?php 
-            include '../includes/header-stratos.html';
+            include '../includes/header.html';
+            include '../includes/banner-stratos.html';
             include '../includes/product-info-stratos.html';
             include '../includes/features-stratos.html';
             include '../includes/content-stratos.html';

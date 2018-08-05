@@ -16,7 +16,8 @@
     <body>
         <div class="container-fluid">
         <?php 
-            include '../includes/header-bip.html';
+            include '../includes/header.html';
+            include '../includes/banner-bip.html';
             include '../includes/product-info-bip.html';
             include '../includes/features-bip.html';
             include '../includes/content-bip.html';

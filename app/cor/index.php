@@ -15,7 +15,8 @@
     <body>
         <div class="container-fluid">
         <?php 
-            include '../includes/header-cor.html';
+            include '../includes/header.html';
+            include '../includes/banner-cor.html';
             include '../includes/product-info-cor.html';
             include '../includes/features-cor.html';
             include '../includes/content-cor.html';

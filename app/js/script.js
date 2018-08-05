@@ -8,6 +8,59 @@ $(function () {
         }, 500);
     })
 
+
+    // Слайдер
+    $('#right').on('click', function (e) {
+        var curSlide = $('.slide:visible'); // текущий сдайд
+        var clientWidth = curSlide[0].clientWidth // текущая ширина окна
+
+        $(curSlide).prev().css({
+            right: clientWidth,
+            display: 'block'
+        });
+        $(curSlide).animate({
+            'right': -clientWidth
+        }, {
+            duration: 300,
+            start: function () {
+                $(curSlide).prev().animate({
+                    right: 0
+                }, 300)
+            },
+            done: function () {
+                $(curSlide).hide();
+                var doneSlide = $(curSlide).detach();
+                $('.slider-wrap').prepend(doneSlide);
+            }
+        });
+    });
+
+    $('#left').on('click', function (e) {
+        var curSlide = $('.slide:visible'); // текущий сдайд
+        var clientWidth = curSlide[0].clientWidth // текущая ширина окна
+
+        $(".slide").first().css({
+            right: -clientWidth,
+            display: 'block'
+        });
+        $(curSlide).animate({
+            'right': clientWidth
+        }, {
+            duration: 300,
+            start: function () {
+                $(".slide").first().animate({
+                    right: 0
+                }, 300)
+            },
+            done: function () {
+                $(curSlide).hide();
+                var doneSlide = $('.slide').first().detach();
+                $('.slider-wrap').append(doneSlide);
+            }
+        });
+    });
+
+
     $(".prew").on('click', function () {
         var curImgSrc = $(this).find('img').attr('src');
         $('.large-photo').attr('src', curImgSrc)

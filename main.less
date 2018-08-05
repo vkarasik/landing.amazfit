@@ -47,134 +47,107 @@ p {
 }
 
 header {
-    padding: 20px 0;
-    background: #212121;
-}
-
-.banner{
-    padding: 120px 0;
+    padding: 40px 0 100px;
+    &.main-page {
+        background: url("../img/man-top-left.jpg") no-repeat 100% 0 #ff6b48;
+        background-size: contain;
+        @media(max-width: 768px) {
+            background:#ff6b48;
+        }
+        .button {
+            color: #ff6b48;
+        }
+    }
+    &.bip-page {
+        background: url("../img/amazfit_bip_smartwatch_composition.jpg") no-repeat 100% 30%;
+        background-size: cover;
+        @media(max-width: 768px) {
+            background:#fcf2f1;
+        }
+        .button {
+            color: #FCF2F1;
+        }
+    }
+    &.stratos-page {
+        background: url("../img/amazfit_stratos_super_avante_homepage_hero.jpg") no-repeat 90% 0 #000000;
+        background-size: contain;
+        h1,
+        p {
+            color: #ffffff;
+        }
+        .button {
+            background: #ffffff;
+            color: #000000;
+        }
+    }
+    &.cor-page {
+        background: url("../img/amazfit_cor.jpg") no-repeat center center;
+        background-size: cover;
+        h1,
+        p {
+            color: #ffffff;
+        }
+        .button {
+            background: #ffffff;
+            color: #000000;
+        }
+    }
     p {
         font-size: 220%;
         margin-bottom: 50px;
         max-width: 600px;
     }
-    &.cor {
-        background: url("../img/cor_bg.jpg") no-repeat center center;
-        background-size: cover;
-
-        p,h1{color: #fff;}
-    }
-    &.bip{
-        background: url("../img/amazfit_bip_smartwatch_composition.jpg") no-repeat center center;
-        background-size: cover;
-    }
-    &.stratos{
-        background: url("../img/amazfit_stratos_super_avante_homepage_hero.jpg") no-repeat 90% 0 #000000;
-        background-size: contain;
-
-        p,h1{color: #fff;}
+    .button {
+        display: inline-block;
+        border: none;
+        text-decoration: none;
+        background: #3b3b3b;
+        padding: 15px 20px;
+        font-size: 200%;
+        letter-spacing: 2px;
+        font-family: "HelveticaNeueCyr-Bold", Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
     }
 }
 
 nav {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: stretch;
     .logo {
-        float: left;
+        background: #ffffff;
+        display: block;
         text-decoration: none;
+        padding: 15px 10px;
+        img:first-child {
+            margin-right: 12px;
+        }
     }
     .menu {
-        float: right;
+        padding: 15px 20px;
+        background: #313233;
+        vertical-align: top;
+        ul {
+            line-height: 2;
+        }
         li {
             display: inline-block;
             margin: 0 10px;
             a {
                 color: #ffffff;
                 font-size: 160%;
-                line-height: 1.7;
                 font-family: "HelveticaNeueCyr-Light", Arial, Helvetica, sans-serif;
                 text-decoration: none;
-                cursor: pointer;
-                &:hover {
-                    color: #dddddd;
-                }
             }
         }
     }
 }
 
-.slider {
-    position: relative;
-    .slider-wrap {
-        position: relative;
-        height: 600px;
-        overflow: hidden;
-    }
-    h1,
-    h2 {
-        color: #333;
-    }
-    .slide {
-        position: absolute;
-        width: 100%;
-        height: 600px;
-        padding: 200px 0; //text-align: center;
-        @media(max-width: 768px) {
-            padding: 100px 0;
-        }
-        &_1 {
-            background: url('../img/banner-bip.jpg') no-repeat center center;
-            background-size: cover;
-            color: #fff;
-        }
-        &_2 {
-            background: url('../img/banner-stratos.jpg') no-repeat center center;
-            background-size: cover;
-            color: #fff;
-        }
-        &_3 {
-            background: url('../img/banner_cor.jpg') no-repeat bottom center;
-            background-size: cover;
-            color: #000;
-        }
-    }
-    #left,
-    #right {
-        position: absolute;
-        z-index: 1000;
-        width: 72px;
-        height: 72px;
-        transform: translate(0%, -50%);
-    }
-    #right {
-        right: 2%;
-        top: 50%;
-        background: url(../img/arrow-right.png) no-repeat center center;
-    }
-    #left {
-        left: 2%;
-        top: 50%;
-        background: url(../img/arrow-left.png) no-repeat center center;
-    }
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 35px;
-    border: none;
-    background: #F22F2F;
-    font-family: "HelveticaNeueCyr-Light", Arial, Helvetica, sans-serif;
-    color: #fff;
-    font-size: 160%;
-    text-decoration: none;
-    text-align: center;
-    &:hover {
-        text-decoration: none;
-        color: #fff;
-    }
-}
-
 .products {
+    margin-top: -35px;
+    margin-bottom: 50px;
     background: #ffffff;
-    padding: 0;
+    padding: 50px 0 0;
     h2 {
         text-align: center;
         margin-bottom: 50px;
@@ -211,6 +184,7 @@ nav {
     .item {
         text-align: center;
         padding: 0 !important;
+        margin-bottom: 30px;
     }
     .title {
         position: relative;
@@ -221,12 +195,6 @@ nav {
         margin-top: -40px;
         padding: 20px;
         text-decoration: none;
-    }
-}
-
-.promo {
-    img {
-        max-width: 100%;
     }
 }
 
@@ -321,7 +289,7 @@ nav {
 }
 
 .app {
-    padding: 70px 0;
+    padding: 50px 50px 0;
     h2 {
         text-align: left;
     }
@@ -425,9 +393,10 @@ nav {
             margin-bottom: 10px;
         }
     }
+    .map {
+        margin-top: 30px;
+    }
 }
-
-.map {}
 
 .manual {
     background: url("../img/pdf.svg") no-repeat left center;
@@ -452,9 +421,9 @@ footer {
         font-family: "HelveticaNeueCyr-Roman";
         letter-spacing: 0.05em;
     }
-    a {
+    a{
         color: #ffed00;
-        &:hover {
+        &:hover{
             color: #ffed00 - 30%;
         }
     }
@@ -536,12 +505,12 @@ footer {
     }
 }
 
-.table {
-    th {
+.table{
+    th{
         font-weight: bold;
     }
     font-size: 160%;
-    td {
+    td{
         text-align: left;
     }
 }

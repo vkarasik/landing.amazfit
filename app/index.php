@@ -16,11 +16,13 @@
         <div class="container-fluid">
         <?php 
             include 'includes/header.html'; 
+            include 'includes/slider.html';
+            include 'includes/features.html';
             include 'includes/products.html'; 
-            include 'includes/features.html'; 
-            include 'includes/awards.html'; 
+            //include 'includes/awards.html'; 
             include 'includes/app.html'; 
-            include 'includes/social.html'; 
+            //include 'includes/social.html'; 
+            include 'includes/promo.html'; 
             include 'includes/shops.html'; 
             include 'includes/footer.html'; 
         ?>
