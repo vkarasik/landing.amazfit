@@ -8,6 +8,10 @@ $(function () {
         }, 500);
     })
 
+    $('.menu-icon').on('click', function(){
+        $('.menu').slideToggle();
+    })
+
 
     // Слайдер
     $('#right').on('click', function (e) {

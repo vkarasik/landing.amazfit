@@ -49,6 +49,52 @@ p {
 header {
     padding: 20px 0;
     background: #212121;
+    nav {
+        .logo {
+            float: left;
+            text-decoration: none;
+        }
+        .menu-icon{
+            display: none;
+            float: right;
+            height: 25px;
+            width: 25px;
+            background: url('../img/menu.svg') no-repeat center center;
+            @media(max-width: 768px){
+                display: block;
+            }
+        }
+        .menu {
+            float: right;
+            @media(max-width: 768px){
+                display: none;
+                float: none;
+                clear: both;
+                padding: 10px 0;
+                
+            }
+            li {
+                display: inline-block;
+                margin: 0 10px;
+                a {
+                    color: #ffffff;
+                    font-size: 160%;
+                    line-height: 1.7;
+                    font-family: "HelveticaNeueCyr-Light", Arial, Helvetica, sans-serif;
+                    text-decoration: none;
+                    cursor: pointer;
+                    &:hover {
+                        color: #dddddd;
+                    }
+                }
+                @media(max-width: 768px){
+                    display: block;
+                    border-bottom: 1px solid #dddddd;
+                    margin: 7px 0;
+                }
+            }
+        }
+    }
 }
 
 .banner{
@@ -73,31 +119,6 @@ header {
         background-size: contain;
 
         p,h1{color: #fff;}
-    }
-}
-
-nav {
-    .logo {
-        float: left;
-        text-decoration: none;
-    }
-    .menu {
-        float: right;
-        li {
-            display: inline-block;
-            margin: 0 10px;
-            a {
-                color: #ffffff;
-                font-size: 160%;
-                line-height: 1.7;
-                font-family: "HelveticaNeueCyr-Light", Arial, Helvetica, sans-serif;
-                text-decoration: none;
-                cursor: pointer;
-                &:hover {
-                    color: #dddddd;
-                }
-            }
-        }
     }
 }
 
