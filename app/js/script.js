@@ -73,7 +73,7 @@ $(function () {
     var price = {
         cor: {
             name: 'COR',
-            price: '149',
+            price: '159',
         },
         bip: {
             name: 'BIP',
