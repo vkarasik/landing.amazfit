@@ -22,7 +22,7 @@
             //include 'includes/awards.html'; 
             include 'includes/app.html'; 
             //include 'includes/social.html'; 
-            include 'includes/promo.html'; 
+            //include 'includes/promo.html'; 
             include 'includes/shops.html'; 
             include 'includes/footer.html'; 
         ?>
