@@ -7,7 +7,7 @@
         <meta http-equiv="Cache-control" content="no-cache">
 		<meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="-1">
-        <link rel="shortcut icon" href="favicon.ico">
+
         <meta name="description" content="Часы поддерживают множество полезных для спорта функций. Они отлично подходят для занятий бегом, ходьбой, езды
         на велосипеде, плавания, эллиптической машины, альпинизма, триатлона, тенниса, футбола и лыж.">
         <title>Купить Amazfit Stratos</title>

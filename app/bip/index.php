@@ -7,7 +7,7 @@
         <meta http-equiv="Cache-control" content="no-cache">
 		<meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="-1">
-        <link rel="shortcut icon" href="favicon.ico">
+
         <meta name="description" content="Часы способны выдержать 30+ дней автономной работы. Оснащены датчиком GPS, датчиком измерения частоты сердечных
         сокращений, отслеживают всю физическую активность и многое другое. Вес 28 грамм.">
         <title>Купить Amazfit Bip</title>

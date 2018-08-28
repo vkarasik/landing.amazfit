@@ -7,7 +7,7 @@
         <meta http-equiv="Cache-control" content="no-cache">
 		<meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="-1">
-        <link rel="shortcut icon" href="favicon.ico">
+
         <meta name="description" content="Приобретайте часы и фитнес браслеты Amazfit в Минске">
         <title>Где купить Amazfit | Лучшие фитнес браслеты</title>
         <?php include 'includes/head.html' ?>

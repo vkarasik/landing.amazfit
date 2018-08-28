@@ -7,7 +7,7 @@
         <meta http-equiv="Cache-control" content="no-cache">
 		<meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="-1">
-        <link rel="shortcut icon" href="favicon.ico">
+
         <meta name="description" content="Браслет имеет корпус из нержавеющей стали со стеклом Corning Gorilla Glass. Оснащен датчиком измерения пульса, трекером активности и сна.">
         <title>Купить Amazfit Cor</title>
         <?php include '../includes/head.html' ?>
