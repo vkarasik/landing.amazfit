@@ -81,7 +81,7 @@ $(function () {
         },
         stratos: {
             name: 'STRATOS',
-            price: '559',
+            price: '549',
         }
     }
     var url = document.location.pathname;
