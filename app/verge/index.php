@@ -18,6 +18,7 @@
         <?php 
             include '../includes/header.html';
             include '../includes/banner-verge.html';
+            include '../includes/product-info-verge.html';
             include '../includes/shops.html';
             include '../includes/footer.html';
         ?>
